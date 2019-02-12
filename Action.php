@@ -1,6 +1,6 @@
 <?php
 
-namespace mongosoft\soapserver;
+namespace greenex\soapserver;
 
 use Yii;
 use yii\web\Response;

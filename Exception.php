@@ -1,6 +1,6 @@
 <?php
 
-namespace mongosoft\soapserver;
+namespace greenex\soapserver;
 
 /**
  * Class Exception

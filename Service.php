@@ -1,6 +1,6 @@
 <?php
 
-namespace mongosoft\soapserver;
+namespace greenex\soapserver;
 
 use PHP2WSDL\PHPClass2WSDL;
 use SoapServer;

@@ -1,10 +1,10 @@
 <?php
 
-namespace mongosoft\soapserver\tests\unit;
+namespace greenex\soapserver\tests\unit;
 
 use Codeception\TestCase\Test;
 use SimpleXMLElement;
-use mongosoft\soapserver\Service;
+use greenex\soapserver\Service;
 
 class ServiceTest extends Test
 {

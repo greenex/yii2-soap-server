@@ -1,6 +1,6 @@
 <?php
 
-namespace mongosoft\soapserver\tests\unit;
+namespace greenex\soapserver\tests\unit;
 
 class Controller
 {
@@ -8,7 +8,7 @@ class Controller
     {
         return [
             'hello' => [
-                'class' => 'mongosoft\soapserver\Action',
+                'class' => 'greenex\soapserver\Action',
             ],
         ];
     }

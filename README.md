@@ -3,9 +3,9 @@ SOAP Server Extension for Yii 2
 
 Note, PHP SOAP extension is required.
 
-[![Latest Stable Version](https://poser.pugx.org/mongosoft/yii2-soap-server/v/stable.png)](https://packagist.org/packages/mongosoft/yii2-soap-server)
-[![Total Downloads](https://poser.pugx.org/mongosoft/yii2-soap-server/downloads.png)](https://packagist.org/packages/mongosoft/yii2-soap-server)
-[![Build Status](https://travis-ci.org/mongosoft/yii2-soap-server.png)](https://travis-ci.org/mongosoft/yii2-soap-server)
+[![Latest Stable Version](https://poser.pugx.org/greenex/yii2-soap-server/v/stable.png)](https://packagist.org/packages/greenex/yii2-soap-server)
+[![Total Downloads](https://poser.pugx.org/greenex/yii2-soap-server/downloads.png)](https://packagist.org/packages/greenex/yii2-soap-server)
+[![Build Status](https://travis-ci.org/greenex/yii2-soap-server.png)](https://travis-ci.org/greenex/yii2-soap-server)
 
 Installation
 ------------
@@ -15,13 +15,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist mongosoft/yii2-soap-server "*"
+composer require --prefer-dist greenex/yii2-soap-server "*"
 ```
 
 or add
 
 ```json
-"mongosoft/yii2-soap-server": "*"
+"greenex/yii2-soap-server": "*"
 ```
 
 to the `require` section of your `composer.json` file.
@@ -29,7 +29,7 @@ to the `require` section of your `composer.json` file.
 Usage
 -----
 
-You need to add [[mongosoft\soapserver\Action]] to web controller.
+You need to add [[greenex\soapserver\Action]] to web controller.
 
 Note, In a service class, a remote invokable method must be a public method with a doc
 comment block containing the '@soap' tag.
@@ -43,7 +43,7 @@ class ApiController extends Controller
     public function actions()
     {
         return [
-            'hello' => 'mongosoft\soapserver\Action',
+            'hello' => 'greenex\soapserver\Action',
         ];
     }
 
@@ -70,7 +70,7 @@ You can use this when the request is to complex for the WSDL generator.
     {
         return [
             'index' => [
-                'class' => 'mongosoft\soapserver\Action',
+                'class' => 'greenex\soapserver\Action',
                 'serviceOptions' => [
                     'disableWsdlMode' => true,
                 ]
