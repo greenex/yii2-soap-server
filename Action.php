@@ -92,12 +92,13 @@ class Action extends \yii\base\Action
     {
         Yii::$app->getResponse()->format = Response::FORMAT_RAW;
 
-        if (Yii::$app->request->get($this->serviceVar, false)) {
-            return $this->getService()->run();
-        } else {
+        if (Yii::$app->request->get('wsdl', false)) {
+
             $response = Yii::$app->getResponse();
             $response->getHeaders()->set('Content-Type', 'application/xml; charset=' . $response->charset);
             return $this->getService()->generateWsdl();
+        } else {
+            return $this->getService()->run();
         }
     }
 
