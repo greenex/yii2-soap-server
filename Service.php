@@ -3,7 +3,6 @@
 namespace greenex\soapserver;
 
 use PHP2WSDL\PHPClass2WSDL;
-use SoapServer;
 use Yii;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
@@ -148,9 +147,9 @@ class Service extends Component
         header('Content-Type: text/xml;charset=' . $this->encoding);
 
         if ($this->disableWsdlMode) {
-            $server = new SoapServer(null, array_merge(['uri' => $this->serviceUrl], $this->getOptions()));
+            $server = new QuickbooksSoapServer(null, array_merge(['uri' => $this->serviceUrl], $this->getOptions()));
         } else {
-            $server = new SoapServer($this->wsdlUrl, $this->getOptions());
+            $server = new QuickbooksSoapServer($this->wsdlUrl, $this->getOptions());
         }
         try {
             if ($this->persistence !== null) {
